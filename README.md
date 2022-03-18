@@ -1,6 +1,7 @@
 # :wave: Say hi to uPet theme:
 # Link to live theme is given below:
 www.upet-dev.myshopify.com
+password: upet
 ...
 # What I did in this:
 I created a one page template with customize able sections and blocks for one section "features"
