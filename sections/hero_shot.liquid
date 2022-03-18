@@ -1,0 +1,110 @@
+{% style %}
+    .hero_shot {
+    background-color: {{ section.settings.bg_color }};
+  }
+  .hero_shot .content{
+    padding: 64px 0;
+  }
+  .hero_shot{
+      color: {{ section.settings.font_color }}
+  }
+  .hero_shot_content h1{
+    font-size:2.5rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 3.5rem;
+    margin-bottom:36px;
+  }
+  .hero_shot_content h5{
+    font-size:1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 36px;
+  }
+  .hero_shot_content .button{
+    width:100%;
+    height: 56px;
+    text-align:center;
+    font-size:1rem;
+    line-height: 56px;
+    color: #ffffff;
+    font-weight: 700;
+    background:#02E0B1;
+    text-transform: uppercase;
+    border-radius:8px;
+  }
+{% endstyle %}
+<div class="full-width hero_shot">
+    <div class="content">
+        <div class="w-full lg:justify-between overflow-hidden lg:flex hero_shot_content">
+            <div class="sm:pb-9 sm:w-full md:w-full lg:w-3/6 sm:float-right">
+                <img src="{{ section.settings.hero_shot_image | image_url: width: 500 }}"
+                loading="lazy"
+                class="hero_shot"
+                width="100%"
+                height="auto"
+                alt="Hero shot Image"
+              >
+            </div>
+
+            <div class="sm:w-full sm:text-center md:text-center lg:text-left md:w-full lg:w-3/6 lg:flex lg:justify-center sm:float-left lg:items-center lg:flex-col">
+              <div class="column_wrapper">
+                <h1 class="self-start">{{ section.settings.hero_headline }}</h1>
+                <h5 class="selft-start">{{ section.settings.hero_shot_detail }}</h5>
+                <button  type="button" class="button_ripple shop_button button self-start">{{ section.settings.hero_button }}</button>
+              </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Hero Shot",
+    "tag": "section",
+    "class": "hero_shot",
+    "settings": [
+    {
+        "type": "image_picker",
+        "id": "hero_shot_image",
+        "label": "Hero Shot Image"
+    },
+    {
+        "type" : "text",
+        "id" : "hero_headline",
+        "label" : "Hero Headline", 
+        "default" : "uPet pet's loss protection"
+    },
+    {
+        "type": "textarea",
+        "id": "hero_shot_detail",
+        "label": "Hero shot details",
+        "default": "Multiple IDs working together to protect your pets. Each uPet ID adds another layer of protection. Every layer added is a safer pet."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_hero_shot_button",
+        "label": "Show hero shot button",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "hero_button",
+        "label" : "Hero Shot Button Text", 
+        "default" : "Shop Upet"
+    },
+    {
+        "type": "color",
+        "id": "font_color",
+        "label": "Font Color",
+        "default": "#4B4B4B"
+      } ,
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default" : "#F9F9F9"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,25 @@
+[
+  {
+    "name": "uPet_by_SibShahz",
+    "theme_name": "uPet",
+    "theme_version": "1.0.0",
+    "theme_author": "Syed_Shahid_Gillani",
+    "theme_documentation_url": "https://github.com/Shopify/themekit",
+    "theme_support_url": "https://github.com/Shopify/themekit/issues"
+  },
+ { "name": "Site Color Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Headings Color"
+      },
+      {
+        "type": "color",
+        "id": "headings_color",
+        "default": "#4B4B4B",
+        "label": "Choose Heading Color",
+        "info": "Set Headings Color Here!"
+      }
+    ]
+  }
+]

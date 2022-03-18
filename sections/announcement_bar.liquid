@@ -1,0 +1,102 @@
+{% style %}
+    .bg_color {
+    background-color: {{ section.settings.bg_color }};
+  }
+  .top_banner{
+    font-size:1rem;
+    line-height:1.25rem;
+    font-weight:400;
+    font-style:normal;
+  }
+  .phone_icon{
+    margin-top:2px;
+  }
+  .top_banner .content{
+      padding:12px 0;
+      line-height:20px;
+  }
+  .top_banner,svg{
+      color: {{ section.settings.font_color }}
+  }
+{% endstyle %}
+
+<div class="full-width w-full top_banner bg_color">
+    <div class="content overflow-hidden">
+      <div class="inline float-left leading-5">
+        <span class="float-left mr-3">QUESTIONS? </span> <span class=" mr-3 float-left w-4 h-4 leading-5 phone_icon">{% render 'phone-icon' %}</span> <span class="float-left">{{ section.settings.banner_text }}</span>
+      </div>
+      <div class="inline float-right leading-5">
+        <span class="float-left leading-5 w-5 h-5">{% render 'flag-icon' %}</span><span class="float-right leading-5 ml-3"> EN</span> 
+      </div>
+    </div>
+  </div>
+  
+  
+  {% schema %}
+  {
+    "name": "Announcement Bar",
+    "tag": "section",
+    "class": "top_banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "banner_text",
+        "label": "Banner",
+        "default" : "(929) 566-7788"
+      },
+      {
+        "type": "select",
+        "id": "select_icon",
+        "label": "Select Icon",
+        "options": [
+          {
+            "value": "icon-phone",
+            "label": "Phone"
+          },
+          {
+            "value": "icon-heart",
+            "label": "Heart"
+          },
+          {
+            "value": "icon-flag",
+            "label": "Flag"
+          }
+        ],
+        "default": "icon-phone"
+      },
+      {
+        "type": "select",
+        "id": "select_flag",
+        "label": "Select Icon",
+        "options": [
+          {
+            "value": "icon-phone",
+            "label": "Phone"
+          },
+          {
+            "value": "icon-heart",
+            "label": "Heart"
+          },
+          {
+            "value": "icon-flag",
+            "label": "Flag"
+          }
+        ],
+        "default": "icon-phone"
+      },
+      {
+        "type": "color",
+        "id": "font_color",
+        "label": "Font Color",
+        "default": "#4B4B4B"
+      } ,
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default" : "#F0F0F0"
+      }
+  
+    ]
+  }
+  {% endschema %}

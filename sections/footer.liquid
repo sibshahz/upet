@@ -1,0 +1,124 @@
+{% style %}
+    .footer_top{
+        padding-top:80px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid #dbdbdb;
+    }
+.footer_bottom{
+
+        padding: 40px 0;
+    }
+.footer_content {
+    background-color: {{ section.settings.bg_color }};
+  }
+  .footer_content{
+      color: {{ section.settings.font_color }};
+  }
+{% endstyle %}
+<div class="w-full full-width footer_content">
+    <div class="content">
+        <div class="footer_top overflow-hidden">
+                
+            <div class="help_center float-left">
+                <p class="font-bold mb-3">{{ section.settings.footer_help_headline }}</p>
+                <div>{{ section.settings.help_detail }}</div>
+            </div>
+
+            <div class="social_links float-right text-right">
+
+                <span class="social inline float-right ml-2">
+                    <a href="{{ section.settings.facebook_link }}">{% render 'facebook-icon' %}</a>
+                </span>
+                <span class="social inline float-right ml-2">
+                    <a href="{{ section.settings.youtube_link }}">{% render 'youtube-icon' %}</a>
+                </span>
+                <span class="social inline float-right ml-2">
+                    <a href="{{ section.settings.instagram_link }}">{% render 'instagram-icon' %}</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="footer_bottom w-full justify-between overflow-hidden">
+            <div class="float-left love_line">Made with {% render 'heart-icon' %} in New York</div>
+            <div class="float-right">
+                <div class="mb-2 underline"><a href="{{ section.settings.terms_link }}">Terms of Service and Privacy Policy</a></div>
+                <div class="text-right">&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Footer Section",
+    "tag": "section",
+    "class": "footer_section",
+    "settings": [
+    {
+        "type" : "text",
+        "id" : "footer_help_headline",
+        "label" : "Help Headline", 
+        "default" : "Need some help?"
+    },
+    {
+        "type": "richtext",
+        "id": "help_detail",
+        "label": "Help detail"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_facebook_icon",
+        "label": "Show Facebook Link",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "facebook_link",
+        "label" : "Facebook Page", 
+        "default" : "https://www.facebook.com/"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_youtube_icon",
+        "label": "Show Youtube Link",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "youtube_link",
+        "label" : "Youtube Channel", 
+        "default" : "https://www.youtube.com/"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_instagram_icon",
+        "label": "Show Instagram Link",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "instagram_link",
+        "label" : "Instagram Handle", 
+        "default" : "https://www.instagram.com/"
+    },
+    {
+        "type": "url",
+        "id": "terms_link",
+        "label": "Terms of Service Link"
+      },
+      {
+        "type": "color",
+        "id": "font_color",
+        "label": "Font Color",
+        "default": "#4B4B4B"
+      } ,
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default" : "#F0F0F0"
+      }
+      
+    ]
+  }
+{% endschema %}

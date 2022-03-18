@@ -1,0 +1,116 @@
+{% style %}
+    .main_hero {
+
+    background-color: {{ section.settings.bg_color }};
+  }
+  .main_hero .content{
+    padding-top: 30px;
+    padding-bottom:28px;
+  }
+  .main_hero{
+      color: {{ section.settings.font_color }}
+  }
+  .hero_content{
+
+  }
+  .hero_content h1{
+    font-size:2.5rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 3.5rem;
+    margin-bottom:36px;
+  }
+  .hero_content h5{
+    font-size:1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 36px;
+  }
+  .hero_content .button{
+    width:100%;
+    height: 56px;
+    text-align:center;
+    font-size:1rem;
+    line-height: 56px;
+    color: #ffffff;
+    font-weight: 700;
+    background:#02E0B1;
+    text-transform: uppercase;
+    border-radius:8px;
+  }
+  
+
+{% endstyle %}
+<div class="full-width min-w-full main_hero clear-both">
+    <div class="content ">
+        <div class="lg:w-full lg:justify-between overflow-hidden lg:flex hero_content">
+            <div class="sm:w-full md:w-full lg:w-3/6 flex justify-center items-center flex-col">
+                <div class="sm:w-full sm:pb-14 lg:max-w-[344px]">
+                  <h1 class="self-start sm:text-center lg:text-left">{{ section.settings.hero_headline }}</h1>
+                  <h5 class="self-start sm:text-center lg:text-left">{{ section.settings.main_hero_detail }}</h5>
+                  <button  type="button" class="button_ripple shop_button button self-start">{{ section.settings.hero_button }}</button>
+                </div>
+            </div>
+
+            <div class=" sm:w-full md:w-full lg:w-3/6 sm:float-none lg:float-right lg:flex-col">
+               
+                <img src="{{ section.settings.hero_image | image_url: width: 500 }}"
+                loading="lazy"
+                class="logo"
+                width="auto"
+                height="auto"
+                alt="Something"
+              >
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Main Hero",
+    "tag": "section",
+    "class": "main_hero",
+    "settings": [
+    {
+        "type" : "text",
+        "id" : "hero_headline",
+        "label" : "Hero Headline", 
+        "default" : "Superpowered pet ID system"
+    },
+    {
+        "type": "richtext",
+        "id": "main_hero_detail",
+        "label": "Main hero details"
+      },
+    {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Hero Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_hero_button",
+        "label": "Show hero button",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "hero_button",
+        "label" : "Hero Button Text", 
+        "default" : "Shop Upet"
+    },
+    {
+        "type": "color",
+        "id": "font_color",
+        "label": "Font Color",
+        "default": "#4B4B4B"
+      } ,
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default" : "#F9F9F9"
+      }
+    ]
+  }
+{% endschema %}

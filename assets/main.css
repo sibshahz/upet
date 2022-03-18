@@ -1,0 +1,45 @@
+body{
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    height: 100%;
+}
+.full-width{
+    display: block;
+    width: 100%;
+    clear: both;
+    margin: 0 auto;
+    float: none;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+  }
+  
+  
+ /* Ripple effect */
+button.button_ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  button.button_ripple:hover {
+    background: #02E0B1 radial-gradient(circle, transparent 1%, #4decca 1%) center/15000%;
+  }
+  button.button_ripple:active {
+    background-color: #4decca;
+    background-size: 100%;
+    transition: background 0s;
+  }
+  
+  /* Button style */
+  button.button_ripple {
+    border: none;
+
+    cursor: pointer;
+    color: white;
+    background-color: #02E0B1;
+    outline: none;
+}

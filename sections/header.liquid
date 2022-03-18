@@ -1,0 +1,72 @@
+{% style %}
+    .header_section {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: 30px;
+    padding-bottom:15px; 
+  }
+  .header_section{
+      color: {{ section.settings.font_color }}
+  }
+{% endstyle %}
+<div class="header_section clear-both overflow-hidden">
+    <div class="content">
+      <h1 class=" float-left">
+        {% if section.settings.logo_image %}
+        {{ section.settings.logo_image | image_url: width: 108 | image_tag }}    
+        {% else %}
+        {{ shop.name }}
+        {% endif %}
+      </h1>
+      <div class="login_url float-right">
+        {% if customer %}
+        <a href="{{ routes.account_url }}">Account</a>
+      {% else %}
+        <a href="{{ routes.account_login_url }}">Sign In</a>
+        {% endif %}
+      </div>
+    </div>
+    
+</div>
+
+
+{% schema %}
+{
+    "name": "Header Custom",
+    "tag": "section",
+    "class": "logo_banner",
+    "settings": [
+    {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Logo Image"},
+    {
+        "type": "radio",
+        "id": "logo_aligment",
+        "label": "Logo alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label" : "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "color",
+        "id": "font_color",
+        "label": "Font Color",
+        "default": "#4B4B4B"
+      } ,
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default" : "#F9F9F9"
+      }
+    ]
+  }
+{% endschema %}

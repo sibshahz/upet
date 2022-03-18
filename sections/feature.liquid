@@ -1,0 +1,137 @@
+{% style %}
+    .feature_section {
+    background-color: {{ section.settings.bg_color }};
+  }
+  .feature_section .content{
+      padding: 64px 0;
+  }
+  .feature_section{
+      color: {{ section.settings.font_color }}
+  }
+  h3.section_title{
+    font-weight: 700;
+    font-size:2rem;
+    line-height: 2.75rem;
+  }
+
+  .feature_headline{
+    font-weight:700;
+    font-size:1rem;
+    line-height:1.5rem;
+    margin-bottom:16px;
+  }
+  .feature_detail{
+    font-weight:400;
+    font-size:1rem;
+    line-height:1.5rem;
+  }
+  .button_wrapper{
+    
+  }
+  .feature_button{
+    width:100%;
+    height: 56px;
+    text-align:center;
+    font-size:1rem;
+    line-height: 56px;
+    color: #ffffff;
+    font-weight: 700;
+    background:#02E0B1;
+    text-transform: uppercase;
+    border-radius:8px;
+  }
+{% endstyle %}
+<div class="full-width feature_section w-">
+    <div class="content">
+        <h3 class="w-full text-center section_title mb-14">{{ section.settings.feature_title }}</h3>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-14">
+        {% for block in section.blocks %}
+            {% assign img = block.settings.hero_feature_image %}
+            {% assign feature_headline = block.settings.feature_headline %}
+            {% assign feature_detail = block.settings.feature_detail_text %} 
+                
+            <div class="feature_card">
+              <img src="{{ img | image_url: width: 500 }}"
+              loading="lazy"
+              class="feature_image"
+              width="44px"
+              height="auto"
+              alt="Something"
+              >
+              <div class="feature_headline">{{ feature_headline }}</div>
+              <div class="feature_detail">{{ feature_detail }}</div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="button_wrapper w-full text-center">
+            <button type="button" class="button_ripple shop_button feature_button">{{ section.settings.feature_button }}</button>
+          </div>
+          
+    </div>
+</div>
+{% schema %}
+
+{
+    "name": "Feature Section",
+    "tag": "section",
+    "class": "feature_section",
+    "settings": [
+    {
+        "type" : "text",
+        "id" : "feature_title",
+        "label" : "Feature Headline", 
+        "default" : "Any uPet ID gives you"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_feature_button",
+        "label": "Show Feature Button",
+        "default": true
+      },
+      {
+        "type" : "text",
+        "id" : "feature_button",
+        "label" : "Feature Button Text", 
+        "default" : "Shop Upet"
+    },
+    {
+        "type": "color",
+        "id": "font_color",
+        "label": "Font Color",
+        "default": "#4B4B4B"
+      } ,
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default" : "#FFFFFF"
+      }
+    ],
+    "blocks": [
+    {
+      "name": "Featured Items",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "hero_feature_image",
+          "label": "Feature Image"
+        },
+        {
+            "type": "text",
+            "id" : "feature_headline",
+            "label" : "Feature Headline"
+
+        },
+        {
+            "type": "textarea",
+            "id": "feature_detail_text",
+            "label": "Feature details",
+            "default": "Add feature details"
+          }
+      ]
+    }
+    ],
+    "max_blocks": 6
+  }
+{% endschema %}
