@@ -41,48 +41,48 @@
             "type": "image",
             "settings": {
               "hero_feature_image": "shopify:\/\/shop_images\/contact.png",
-              "feature_headline": "",
-              "feature_detail_text": "Add feature details"
+              "feature_headline": "Unlimited contact details",
+              "feature_detail_text": "uPet lets you add vets, breeders, friends and family to your pet's profile"
             }
           },
           "a2b46824-bb36-486a-acd7-97bfbebbb014": {
             "type": "image",
             "settings": {
               "hero_feature_image": "shopify:\/\/shop_images\/alert.png",
-              "feature_headline": "",
-              "feature_detail_text": "Add feature details"
+              "feature_headline": "Instant found location alert",
+              "feature_detail_text": "Notifications are sent immediately to all linked emergency contacts numbers if someone finds your pet"
             }
           },
           "c4c6e4b4-cee2-4ab2-8b67-2660a64afa0d": {
             "type": "image",
             "settings": {
               "hero_feature_image": "shopify:\/\/shop_images\/hotline.png",
-              "feature_headline": "",
-              "feature_detail_text": "Add feature details"
+              "feature_headline": "24\/7 found pet hotline",
+              "feature_detail_text": "A real human helper to speak to if no one answers when someone finds your pet"
             }
           },
           "c6d955d2-0142-4b88-9ebb-c58f34ccab40": {
             "type": "image",
             "settings": {
               "hero_feature_image": "shopify:\/\/shop_images\/amber.png",
-              "feature_headline": "",
-              "feature_detail_text": "Add feature details"
+              "feature_headline": "Amber Alert",
+              "feature_detail_text": "Alert your neighborhood and surrounding shelters at the click of a button if you loose your pet!"
             }
           },
           "b2b7037e-2ccb-48c0-8184-1b08a6aed162": {
             "type": "image",
             "settings": {
               "hero_feature_image": "shopify:\/\/shop_images\/posters.png",
-              "feature_headline": "",
-              "feature_detail_text": "Add feature details"
+              "feature_headline": "Lost Posters",
+              "feature_detail_text": "Pet parents can instantly create lost posters to print and share on social media."
             }
           },
           "ac165f0b-bfa3-484b-9a0a-bf9f5fbce76b": {
             "type": "image",
             "settings": {
               "hero_feature_image": "shopify:\/\/shop_images\/peace.png",
-              "feature_headline": "",
-              "feature_detail_text": "Add feature details"
+              "feature_headline": "Peace of mind",
+              "feature_detail_text": "If your pet goes missing they have the right protection to get them home fast."
             }
           }
         },
