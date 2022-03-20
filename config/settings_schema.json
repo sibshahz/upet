@@ -1,3 +1,70 @@
 [
-
+  {
+    "name": "Colors Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "My settings"
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Font Color",
+        "default": "#4B4B4B"
+      },
+      {
+        "type": "color",
+        "id": "body_font_color",
+        "label": "Heading Font Color",
+        "default": "#4B4B4B"
+      },
+      {
+        "type": "color_background",
+        "id": "body_background_color",
+        "label": "Body Background Color",
+        "default": "linear-gradient(#ffffff, #ffffff)"
+      }
+    ]
+  },
+  {
+    "name": "Font Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Font Size settings"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font_family",
+        "label": "Heading font",
+        "default": "raleway_n7"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font_family",
+        "label": "Body font",
+        "default": "raleway_n4"
+      },
+      {
+        "type": "range",
+        "id": "font_base_size",
+        "min": 16,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Base Scale",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "font_base_line_height",
+        "min": 12,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Font Base Line Height",
+        "default": 24
+      }
+    ]
+  }
 ]
