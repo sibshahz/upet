@@ -15,7 +15,7 @@ shopify theme init [ NAME OF YOUR THEME ] --clone-url https://github.com/sibshah
 ```
 
 ```sh
-shopify login --store [ link to your store ] --clone-url https://github.com/sibshahz/upet
+shopify login --store [ link to your store ] 
 ```
 
 ```sh
