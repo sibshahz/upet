@@ -3,8 +3,8 @@
 www.upet-dev.myshopify.com
 ...
 # What I did in this:
-I created a one page template with customize able sections and blocks for one section "features"
-I have made some options to change different settings from with sections and also from theme settings such as Font Family, Size, Color etc, ofcourse I can do more but for that I need more time. Goal was to give a test and I hope I did good :).
+I created a one page template with customize able sections and one section with blocks name as  "features"
+I have made some options to change different settings from within sections and also from theme settings such as Font Family, Size, Color etc, ofcourse I can do more but for that I need more time. Goal was to give a test and I hope I did good. 	:crossed_fingers:
  
 
 ## How to use
