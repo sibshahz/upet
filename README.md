@@ -1,6 +1,6 @@
 # :wave: Say hi to uPet theme:
 # Link to live theme is given below:
-www.upet-dev.myshopify.com
+http://www.upet-dev.myshopify.com
 Password to view live theme: upet
 ...
 # What I did in this:
